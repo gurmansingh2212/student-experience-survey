@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Experience Survey</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+        <header>
+            <h1 id="title">Student Experience Survey</h1>
+            <p id="description">
+                Help us improve the college experience by sharing your thoughts and suggestions.
+            </p>
+        </header>
+
+        <form id="survey-form">
+
+            <div class="form-group">
+                <label id="name-label" for="name">Full Name</label>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your full name"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label id="email-label" for="email">Email Address</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email address"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label id="number-label" for="number">Age</label>
+                <input
+                    type="number"
+                    id="number"
+                    name="age"
+                    min="16"
+                    max="60"
+                    placeholder="Enter your age"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="dropdown">Which option best describes you?</label>
+                <select id="dropdown" name="role" required>
+                    <option value="" disabled selected>Select your current role</option>
+                    <option value="student">College Student</option>
+                    <option value="graduate">Graduate</option>
+                    <option value="teacher">Teacher</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <p class="question">How satisfied are you with your college experience?</p>
+
+                <label class="choice">
+                    <input type="radio" name="satisfaction" value="excellent" required>
+                    Excellent
+                </label>
+
+                <label class="choice">
+                    <input type="radio" name="satisfaction" value="good">
+                    Good
+                </label>
+
+                <label class="choice">
+                    <input type="radio" name="satisfaction" value="average">
+                    Average
+                </label>
+
+                <label class="choice">
+                    <input type="radio" name="satisfaction" value="poor">
+                    Poor
+                </label>
+            </div>
+
+            <div class="form-group">
+                <p class="question">Which areas would you like us to improve?</p>
+
+                <label class="choice">
+                    <input type="checkbox" name="improvements" value="teaching">
+                    Teaching quality
+                </label>
+
+                <label class="choice">
+                    <input type="checkbox" name="improvements" value="infrastructure">
+                    Campus infrastructure
+                </label>
+
+                <label class="choice">
+                    <input type="checkbox" name="improvements" value="activities">
+                    Events and activities
+                </label>
+
+                <label class="choice">
+                    <input type="checkbox" name="improvements" value="placements">
+                    Internships and placements
+                </label>
+
+                <label class="choice">
+                    <input type="checkbox" name="improvements" value="technology">
+                    Technology and lab facilities
+                </label>
+            </div>
+
+            <div class="form-group">
+                <label for="comments">Additional Comments</label>
+                <textarea
+                    id="comments"
+                    name="comments"
+                    rows="5"
+                    placeholder="Share your ideas or suggestions here..."
+                ></textarea>
+            </div>
+
+            <button type="submit" id="submit">Submit Survey</button>
+
+            <p class="footer-text">Thank you for sharing your feedback!</p>
+
+        </form>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
